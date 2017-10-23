@@ -1,5 +1,5 @@
 
-# The Timber Starter Theme
+# The Timber Starter Theme with Gulp and Webpack
 
 The "_s" for Timber: a dead-simple theme that you can build from. The primary purpose of this theme is to provide a file structure rather than a framework for markup or styles. Configure your Sass, scripts, and task runners however you would like!
 
@@ -13,7 +13,12 @@ Install this theme as you would any other, and be sure the Timber plugin is acti
 2. Download the zip for this theme (or clone it) and move it to `wp-content/themes` in your WordPress installation. 
 3. Rename the folder to something that makes sense for your website (generally no spaces and all lowercase). You could keep the name `timber-starter-theme` but the point of a starter theme is to make it your own!
 4. Activate the theme in Appearance >  Themes.
-5. Do your thing! And read [the docs](https://github.com/jarednova/timber/wiki).
+5. Install and build frontend dependencies by navigating to theme folder and running `npm install && npm run gulp`
+6. Do your thing! And read [the docs](https://github.com/jarednova/timber/wiki).
+
+## Building for production
+
+Run `cd wp-content/themes/my-theme/ && npm install && npm run gulp build` to build minified files for production.
 
 ## What's here?
 
