@@ -60,3 +60,18 @@ class StarterSite extends TimberSite {
 }
 
 new StarterSite();
+
+function projectname_add_assets() {
+    wp_enqueue_style( 'style', get_template_directory_uri() . '/static/dist/css/style.css', [], projectname_get_hash('/static/dist/css/style.css'));
+    wp_enqueue_script( 'vendor', get_template_directory_uri() . '/static/dist/js/vendor.bundle.js', [], projectname_get_hash('/static/dist/js/vendor.bundle.js'), true );
+    wp_enqueue_script( 'script', get_template_directory_uri() . '/static/dist/js/script.bundle.js', ['vendor'], projectname_get_hash('/static/dist/js/script.bundle.js') , true );
+}
+add_action( 'wp_enqueue_scripts', 'projectname_add_assets' );
+
+function projectname_get_hash($file) {
+    $hash = @md5_file(get_template_directory_uri() . $file);
+    if ($hash) {
+        return $hash;
+    }
+    return null;
+}

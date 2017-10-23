@@ -1,0 +1,38 @@
+{
+  "name": "starter-theme-gulp-webpack",
+  "version": "1.0.0",
+  "description": "Timber starter theme with Gulp and Webpack",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joppuyo/starter-theme-gulp-webpack.git"
+  },
+  "author": "Johannes Siipola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joppuyo/starter-theme-gulp-webpack/issues"
+  },
+  "homepage": "https://github.com/joppuyo/starter-theme-gulp-webpack#readme",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-hash-src": "^0.1.6",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "jquery": "^3.2.1",
+    "webpack": "^3.6.0",
+    "webpack-stream": "^4.0.0"
+  }
+}
