@@ -41,8 +41,8 @@ gulp.task('sass-production', ['copy'], () => {
 });
 
 gulp.task('copy', () => {
-    return gulp.src(['src/assets/**/*'], {base: 'src'})
-        .pipe(gulp.dest('dist'));
+    return gulp.src(['static/src/assets/**/*'], { base: 'static/src' })
+        .pipe(gulp.dest('static/dist/'));
 });
 
 gulp.task('webpack', ['copy'], () => {
