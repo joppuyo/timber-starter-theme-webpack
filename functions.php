@@ -69,7 +69,7 @@ function projectname_add_assets() {
 add_action( 'wp_enqueue_scripts', 'projectname_add_assets' );
 
 function projectname_get_hash($file) {
-    $hash = @md5_file(get_template_directory_uri() . $file);
+    $hash = @md5_file(get_template_directory() . $file);
     if ($hash) {
         return $hash;
     }
