@@ -21,18 +21,22 @@
   "homepage": "https://github.com/joppuyo/starter-theme-gulp-webpack#readme",
   "dependencies": {
     "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
+    "babel-loader": "^7.1.5",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "bootstrap": "^4.0.0-beta.2",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-clean-css": "^3.9.0",
-    "gulp-hash-src": "^0.1.6",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.1",
+    "css-loader": "^1.0.0",
+    "extract-loader": "^2.0.1",
+    "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
     "jquery": "^3.2.1",
-    "webpack": "^3.6.0",
-    "webpack-stream": "^4.0.0"
+    "mini-css-extract-plugin": "^0.4.1",
+    "momentjs": "^2.0.0",
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.0.3",
+    "webpack": "^4.16.3"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.1.0"
   }
 }

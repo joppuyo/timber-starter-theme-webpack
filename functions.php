@@ -4,15 +4,15 @@ if ( ! class_exists( 'Timber' ) ) {
 	add_action( 'admin_notices', function() {
 		echo '<div class="error"><p>Timber not activated. Make sure you activate the plugin in <a href="' . esc_url( admin_url( 'plugins.php#timber' ) ) . '">' . esc_url( admin_url( 'plugins.php') ) . '</a></p></div>';
 	});
-	
+
 	add_filter('template_include', function($template) {
 		return get_stylesheet_directory() . '/static/no-timber.html';
 	});
-	
+
 	return;
 }
 
-Timber::$dirname = array('templates', 'views');
+Timber::$dirname = ['dist/templates'];
 
 class StarterSite extends TimberSite {
 
@@ -61,12 +61,11 @@ class StarterSite extends TimberSite {
 
 new StarterSite();
 
-function projectname_add_assets() {
-    wp_enqueue_style( 'style', get_template_directory_uri() . '/static/dist/css/style.css', [], projectname_get_hash('/static/dist/css/style.css'));
-    wp_enqueue_script( 'vendor', get_template_directory_uri() . '/static/dist/js/vendor.bundle.js', [], projectname_get_hash('/static/dist/js/vendor.bundle.js'), true );
-    wp_enqueue_script( 'script', get_template_directory_uri() . '/static/dist/js/script.bundle.js', ['vendor'], projectname_get_hash('/static/dist/js/script.bundle.js') , true );
-}
-add_action( 'wp_enqueue_scripts', 'projectname_add_assets' );
+
+add_action('wp_enqueue_scripts', function () {
+    wp_enqueue_style('style', get_template_directory_uri() . '/dist/style.css', [], projectname_get_hash('/dist/style.css'));
+    wp_enqueue_script('scripts', get_template_directory_uri() . '/dist/script.js', [], projectname_get_hash('/dist/script.js'), true);
+});
 
 function projectname_get_hash($file) {
     $hash = @md5_file(get_template_directory() . $file);

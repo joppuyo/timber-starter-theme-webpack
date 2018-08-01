@@ -1,34 +1,68 @@
-const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    entry: {
-        script: './static/src/js/script.js',
-    },
-    output: { path: __dirname, filename: '[name].bundle.js' },
-    resolve: {
-        extensions: ['*', '.js'],
-    },
-    devtool: 'inline-source-map',
-    plugins: [
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor',
-            minChunks(module, count) {
-                const context = module.context;
-                return context && context.indexOf('node_modules') >= 0;
+  entry: {
+    twig: './src/twig.js',
+    style: './src/scss.js',
+    script: './src/js/script.js',
+  },
+  output: {
+    filename: '[name].js',
+    publicPath: '/wp-content/themes/starter-theme-gulp-webpack/dist/',
+  },
+  resolve: {
+    extensions: ['*', '.js'],
+  },
+  devtool: 'inline-source-map',
+  module: {
+    rules: [
+      {
+        test: /\.(twig)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              context: 'src',
+              name: '[path][name].[ext]',
             },
-        }),
-    ],
-    module: {
-        rules: [
-            {
-                test: /\.js$/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['env'],
-                    },
-                },
-            },
+          },
+          { loader: 'extract-loader' },
+          { loader: 'html-loader' },
         ],
-    },
+      },
+      {
+        test: /\.js$/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['env'],
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|tiff|webp|gif|ico|woff|woff2|eot|ttf|otf|mp4|webm|wav|mp3|m4a|aac|oga)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              context: 'src',
+              name: '[path][name].[ext]?ver=[md5:hash:8]',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.scss$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+      },
+    ],
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+    }),
+  ],
 };
