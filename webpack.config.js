@@ -1,4 +1,5 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const WatchTimePlugin = require('webpack-watch-time-plugin');
 
 module.exports = {
   entry: {
@@ -8,10 +9,13 @@ module.exports = {
   },
   output: {
     filename: '[name].js',
-    publicPath: '/wp-content/themes/starter-theme-gulp-webpack/dist/',
+    publicPath: '/wp-content/themes/timber-starter-theme-webpack/dist/',
   },
   resolve: {
     extensions: ['*', '.js'],
+  },
+  performance: {
+    hints: false,
   },
   devtool: 'inline-source-map',
   module: {
@@ -64,5 +68,6 @@ module.exports = {
       filename: '[name].css',
       chunkFilename: '[id].css',
     }),
+    new WatchTimePlugin(),
   ],
 };
