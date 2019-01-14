@@ -1,17 +1,5 @@
-import './templates/partial/pagination.twig';
-import './templates/404.twig';
-import './templates/author.twig';
-import './templates/base.twig';
-import './templates/comment.twig';
-import './templates/comment-form.twig';
-import './templates/footer.twig';
-import './templates/html-header.twig';
-import './templates/index.twig';
-import './templates/menu.twig';
-import './templates/page.twig';
-import './templates/page-plugin.twig';
-import './templates/sidebar.twig';
-import './templates/single.twig';
-import './templates/single-password.twig';
-import './templates/tease.twig';
-import './templates/tease-post.twig';
+// https://stackoverflow.com/questions/29421409/how-to-load-all-files-in-a-directory-using-webpack-without-require-statements
+function requireAll(require) {
+  require.keys().forEach(require);
+}
+requireAll(require.context('./templates/', true, /\.twig$/));
