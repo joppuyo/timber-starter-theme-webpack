@@ -36,7 +36,14 @@ module.exports = (env, argv) => {
               },
             },
             { loader: 'extract-loader' },
-            { loader: 'html-loader' },
+            {
+              loader: 'html-loader',
+              options: {
+                minimize: false,
+                interpolate: true,
+                attrs: ['img:src', 'link:href'],
+              },
+            },
           ],
         },
         {
@@ -45,7 +52,7 @@ module.exports = (env, argv) => {
             {
               loader: 'babel-loader',
               options: {
-                presets: ['env'],
+                presets: ['@babel/env'],
               },
             },
           ],

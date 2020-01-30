@@ -6,9 +6,6 @@
   "directories": {
     "test": "tests"
   },
-  "scripts": {
-    "gulp": "gulp"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/joppuyo/starter-theme-gulp-webpack.git"
@@ -20,28 +17,29 @@
   },
   "homepage": "https://github.com/joppuyo/starter-theme-gulp-webpack#readme",
   "dependencies": {
-    "autoprefixer": "^9.4.5",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.5",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.6.0",
-    "bootstrap": "^4.0.0-beta.2",
-    "css-loader": "^1.0.0",
-    "cssnano": "^4.1.8",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "autoprefixer": "^9.7.4",
+    "babel-loader": "^8.0.6",
+    "bootstrap": "^4.4.1",
+    "core-js": "^3.6.4",
+    "css-loader": "^1.0.1",
+    "cssnano": "^4.1.10",
     "extract-loader": "^2.0.1",
     "file-loader": "^1.1.11",
     "html-loader": "^0.5.5",
-    "jquery": "^3.2.1",
-    "mini-css-extract-plugin": "^0.4.1",
-    "momentjs": "^2.0.0",
-    "node-sass": "^4.9.2",
+    "jquery": "^3.4.1",
+    "mini-css-extract-plugin": "^0.4.5",
+    "node-sass": "^4.13.1",
     "postcss-loader": "^3.0.0",
-    "sass-loader": "^7.0.3",
-    "svgo-loader": "^2.2.0",
-    "webpack": "^4.16.3"
+    "raw-loader": "^1.0.0",
+    "regenerator-runtime": "^0.13.3",
+    "sass-loader": "^7.3.1",
+    "svgo-loader": "^2.2.1",
+    "webpack": "^4.41.5"
   },
   "devDependencies": {
-    "webpack-cli": "^3.1.0",
+    "webpack-cli": "^3.3.10",
     "webpack-watch-time-plugin": "^0.3.0"
   }
 }
