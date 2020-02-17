@@ -37,7 +37,7 @@ The [main Timber Wiki](https://github.com/jarednova/timber/wiki) is super great,
 
 With webpack, you don't need to. Just put your images and fonts under src and use relative path to the resource. webpack will automatically resolve the paths for you and copy the assets to the right place under `dist`.
 
-Like this with a font
+Like this with a font in a stylesheet:
 
 ```
 @font-face {
@@ -51,7 +51,7 @@ Like this with a font
 }
 ```
 
-It works even in twig files
+It works even in twig files:
 
 ```
 <img src="./images/logo.svg" alt="Logo">
