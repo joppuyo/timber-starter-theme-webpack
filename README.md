@@ -33,3 +33,36 @@ The [main Timber Wiki](https://github.com/jarednova/timber/wiki) is super great,
 * [A real live Timber theme](https://github.com/laras126/yuling-theme).
 * [Timber Video Tutorials](http://timber.github.io/timber/#video-tutorials) and [an incomplete set of screencasts](https://www.youtube.com/playlist?list=PLuIlodXmVQ6pkqWyR6mtQ5gQZ6BrnuFx-) for building a Timber theme from scratch.
 
+## How can I copy assets like images and fonts to the `dist` folder?
+
+With webpack, you don't need to. Just put your images and fonts under src and use relative path to the resource. webpack will automatically resolve the paths for you and copy the assets to the right place under `dist`.
+
+Like this with a font
+
+```
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/open-sans-v15-latin_latin-ext-regular.woff2')
+      format('woff2'),
+    url('./fonts/open-sans-v15-latin_latin-ext-regular.woff')
+      format('woff');
+}
+```
+
+It works even in twig files
+
+```
+<img src="./images/logo.svg" alt="Logo">
+```
+
+## How can I inline SVGs?
+
+You can use interpolation with `html-loader`and use webpack loader override syntax to get the file contents instead of a path to the file:
+
+```
+<div class="icon">
+${require('!raw-loader!./images/logo.svg')}
+</div>
+```
