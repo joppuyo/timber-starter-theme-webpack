@@ -8,7 +8,7 @@ This is basically the [Timber starter theme](https://github.com/timber/starter-t
 * Timber
 * npm
 * webpack for bundling JavaScript and managing assets
-* Babel for compiling JavaScripts
+* Babel for compiling JavaScript
 * Sass for compiling stylesheets
 * Autoprefixer
 * SVG optimization with svgo
