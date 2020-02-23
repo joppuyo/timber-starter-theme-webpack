@@ -1,7 +1,18 @@
 
 # The Timber Starter Theme with Webpack
 
-The "_s" for Timber: a dead-simple theme that you can build from. Now with Webpack!
+This is basically the [Timber starter theme](https://github.com/timber/starter-theme) but with webpack added for managing front-end assets.
+
+## What's included
+
+* Timber
+* npm
+* webpack for bundling JavaScript and managing assets
+* Babel for compiling JavaScripts
+* Sass for compiling stylesheets
+* Autoprefixer
+* SVG optimization with svgo
+* File name hashes for long term caching
 
 ## Installing the Theme
 
@@ -36,7 +47,7 @@ The [main Timber Wiki](https://github.com/jarednova/timber/wiki) is super great,
 
 ## How can I copy assets like images and fonts to the `dist` folder?
 
-With webpack, you don't need to. Just put your images and fonts under src and use relative path to the resource. webpack will automatically resolve the paths for you and copy the assets to the right place under `dist`.
+With webpack, you don't need to. Just put your images and fonts under src and use relative path to the resource. webpack will automatically resolve the paths for you and copy the assets to the right place under `dist`. You can learn more about this by reading [this blog post](https://siipo.la/blog/use-webpack-to-process-static-assets-in-twig-templates-with-wordpress).
 
 Like this with a font in a stylesheet:
 
