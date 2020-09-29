@@ -34,8 +34,6 @@ Run `cd wp-content/themes/my-theme/ && npm install && npx webpack -p` to build m
 
 `src/templates/` contains all of your Twig templates. These pretty much correspond 1 to 1 with the PHP files that respond to the WordPress template hierarchy. At the end of each PHP template, you'll notice a `Timber::render()` function whose first parameter is the Twig file where that data (or `$context`) will be used. Just an FYI.
 
-`bin/` and `tests/` ... basically don't worry about (or remove) these unless you know what they are and want to.
-
 ## Other Resources
 
 * [This branch](https://github.com/laras126/timber-starter-theme/tree/tackle-box) of the starter theme has some more example code with ACF and a slightly different set up.
@@ -46,7 +44,7 @@ Run `cd wp-content/themes/my-theme/ && npm install && npx webpack -p` to build m
 
 ## How can I copy assets like images and fonts to the `dist` folder?
 
-With webpack, you don't need to. Just put your images and fonts under src and use relative path to the resource. webpack will automatically resolve the paths for you and copy the assets to the right place under `dist`. You can learn more about this by reading [this blog post](https://siipo.la/blog/use-webpack-to-process-static-assets-in-twig-templates-with-wordpress).
+With webpack, you don't need to. Just put your images and fonts under `src` and use relative path to the resource. webpack will automatically resolve the paths for you and copy the assets to the right place under `dist`. You can learn more about this by reading [this blog post](https://siipo.la/blog/use-webpack-to-process-static-assets-in-twig-templates-with-wordpress).
 
 Like this with a font in a stylesheet:
 
