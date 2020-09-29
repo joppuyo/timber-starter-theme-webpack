@@ -21,7 +21,7 @@
  * @since    Timber 0.1
  */
 
-use \Timber\Post;
+use Timber\Post;
 use Timber\Timber;
 
 $context = Timber::get_context();
