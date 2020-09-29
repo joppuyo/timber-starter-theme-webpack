@@ -1,47 +1,40 @@
 {
-  "name": "starter-theme-gulp-webpack",
-  "version": "1.0.0",
-  "description": "Timber starter theme with Gulp and Webpack",
-  "main": "index.js",
-  "directories": {
-    "test": "tests"
-  },
+  "name": "starter-theme-webpack",
+  "description": "Timber starter theme with Webpack",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joppuyo/starter-theme-gulp-webpack.git"
+    "url": "git+https://github.com/joppuyo/timber-starter-theme-webpack.git"
   },
   "author": "Johannes Siipola",
-  "license": "ISC",
+  "license": "GPL-2.0-or-later",
   "bugs": {
-    "url": "https://github.com/joppuyo/starter-theme-gulp-webpack/issues"
+    "url": "https://github.com/joppuyo/timber-starter-theme-webpack/issues"
   },
-  "homepage": "https://github.com/joppuyo/starter-theme-gulp-webpack#readme",
+  "homepage": "https://github.com/joppuyo/timber-starter-theme-webpack#readme",
   "dependencies": {
-    "@babel/core": "^7.8.3",
-    "@babel/preset-env": "^7.8.3",
-    "@prettier/plugin-php": "^0.14.3",
-    "autoprefixer": "^9.7.4",
-    "babel-loader": "^8.0.6",
-    "bootstrap": "^4.4.1",
-    "core-js": "^3.6.4",
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "autoprefixer": "^9.8.6",
+    "babel-loader": "^8.1.0",
+    "core-js": "^3.6.5",
     "css-loader": "^1.0.1",
     "cssnano": "^4.1.10",
     "extract-loader": "^2.0.1",
     "file-loader": "^1.1.11",
     "html-loader": "^0.5.5",
-    "jquery": "^3.4.1",
     "mini-css-extract-plugin": "^0.4.5",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
     "postcss-loader": "^3.0.0",
-    "prettier": "^2.1.2",
     "raw-loader": "^1.0.0",
-    "regenerator-runtime": "^0.13.3",
+    "regenerator-runtime": "^0.13.7",
     "sass-loader": "^7.3.1",
     "svgo-loader": "^2.2.1",
-    "webpack": "^4.41.5"
-  },
-  "devDependencies": {
-    "webpack-cli": "^3.3.10",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
     "webpack-watch-time-plugin": "^0.3.0"
   }
 }
