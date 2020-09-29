@@ -75,3 +75,9 @@ You can use interpolation with `html-loader`and use webpack loader override synt
 ${require('!raw-loader!./images/logo.svg')}
 </div>
 ```
+
+## License
+
+GPL v2 or later
+
+This theme is based on the original [Timber Starter Theme](https://github.com/timber/starter-theme/tree/1.x) by Jared Novack and contributors, licensed under the MIT license
