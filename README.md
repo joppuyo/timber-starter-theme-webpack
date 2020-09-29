@@ -5,8 +5,8 @@ This is basically the [Timber starter theme](https://github.com/timber/starter-t
 
 ## What's included
 
-* Timber
-* npm
+* Timber template engine
+* npm for managing front-end dependencies
 * webpack for bundling JavaScript and managing assets
 * Babel for compiling JavaScript
 * Sass for compiling stylesheets
