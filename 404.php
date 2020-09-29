@@ -9,7 +9,5 @@
  * @since    Timber 0.1
  */
 
-use Timber\Timber;
-
-$context = Timber::get_context();
+$context = Timber::context();
 Timber::render('404.twig', $context);

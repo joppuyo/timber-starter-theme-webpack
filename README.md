@@ -18,7 +18,7 @@ This is basically the [Timber starter theme](https://github.com/timber/starter-t
 
 Install this theme as you would any other, and be sure the Timber plugin is activated. But hey, let's break it down into some bullets:
 
-1. Make sure you have installed the plugin for the [Timber Library](https://wordpress.org/plugins/timber-library/) (and Advanced Custom Fields - they [play quite nicely](http://timber.github.io/timber/#acf-cookbook) together). 
+1. Make sure you have installed the plugin for the [Timber Library](https://wordpress.org/plugins/timber-library/) (and Advanced Custom Fields - they [play quite nicely](https://timber.github.io/docs/guides/acf-cookbook/#nav) together). 
 2. Download the zip for this theme (or clone it) and move it to `wp-content/themes` in your WordPress installation. 
 3. Rename the folder to something that makes sense for your website (generally no spaces and all lowercase). You could keep the name `timber-starter-theme` but the point of a starter theme is to make it your own!
 3. Update `publicPath` in `webpack.config.js` to point to correct theme folder after changing the theme name
@@ -38,8 +38,7 @@ Run `cd wp-content/themes/my-theme/ && npm install && npx webpack -p` to build m
 
 ## Other Resources
 
-The [main Timber Wiki](https://github.com/jarednova/timber/wiki) is super great, so reference those often. Also, check out these articles and projects for more info:
-
+* [This branch](https://github.com/laras126/timber-starter-theme/tree/tackle-box) of the starter theme has some more example code with ACF and a slightly different set up.
 * [Twig for Timber Cheatsheet](http://notlaura.com/the-twig-for-timber-cheatsheet/)
 * [Timber and Twig Reignited My Love for WordPress](https://css-tricks.com/timber-and-twig-reignited-my-love-for-wordpress/) on CSS-Tricks
 * [A real live Timber theme](https://github.com/laras126/yuling-theme).

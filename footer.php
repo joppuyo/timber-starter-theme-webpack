@@ -5,11 +5,13 @@
  *
  * If you're not using a plugin that requries this behavior (ones that do include Events Calendar Pro and
  * WooCommerce) you can delete this file and header.php
+ *
+ * @package  WordPress
+ * @subpackage  Timber
+ * @since   Timber 0.1
  */
 
-use Timber\Timber;
-
-$timberContext = $GLOBALS['timberContext'];
+$timberContext = $GLOBALS['timberContext']; // @codingStandardsIgnoreFile
 if (!isset($timberContext)) {
     throw new \Exception('Timber context not set in footer.');
 }
