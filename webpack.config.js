@@ -7,7 +7,7 @@ module.exports = (env, argv) => {
   let config = {
     entry: {
       twig: './src/twig.js',
-      style: './src/scss.js',
+      style: './src/scss/style.scss',
       script: './src/js/script.js',
     },
     output: {
