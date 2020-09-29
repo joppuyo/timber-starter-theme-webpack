@@ -1,5 +1,12 @@
 <?php
 /**
+ * SPDX-FileCopyrightText: 2012-2020 Jared Novack and contributors
+ * SPDX-License-Identifier: MIT
+ * SPDX-FileCopyrightText: 2017-2020 Johannes Siipola
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ */
+
+/**
  * Timber starter-theme
  * https://github.com/timber/starter-theme
  *
