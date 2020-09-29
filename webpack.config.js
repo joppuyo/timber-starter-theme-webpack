@@ -2,6 +2,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const WatchTimePlugin = require('webpack-watch-time-plugin');
 const cssnano = require('cssnano');
 const autoprefixer = require('autoprefixer');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = (env, argv) => {
   let config = {
@@ -77,6 +78,7 @@ module.exports = (env, argv) => {
         chunkFilename: '[id].css',
       }),
       new WatchTimePlugin(),
+      new CleanWebpackPlugin(),
     ],
   };
 
