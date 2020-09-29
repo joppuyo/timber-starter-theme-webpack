@@ -1,4 +1,4 @@
-vendor
-wp-content
-node_modules
-dist
+/vendor
+/wp-content
+/node_modules
+/dist
