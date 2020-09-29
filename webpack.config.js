@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2017-2020 Johannes Siipola
+// SPDX-License-Identifier: CC0-1.0
+
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const WatchTimePlugin = require('webpack-watch-time-plugin');
 const cssnano = require('cssnano');
