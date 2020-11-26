@@ -37,5 +37,10 @@
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-watch-time-plugin": "^0.3.0"
+  },
+  "scripts": {
+    "dev": "webpack -w",
+    "build": "webpack",
+    "build-production": "webpack -p"
   }
 }
