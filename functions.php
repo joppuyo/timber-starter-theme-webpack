@@ -47,7 +47,7 @@ if (!class_exists('Timber')) {
     return;
 }
 
-Timber::$dirname = ['dist/templates'];
+Timber::$dirname = ['dist/templates', 'dist'];
 
 /**
  * By default, Timber does NOT autoescape values. Want to enable Twig's autoescape?
